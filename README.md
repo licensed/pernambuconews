@@ -1,1 +1,1 @@
-# pernambuconews
+Pernambuco News :: Seu aplicativo de notícias de Pernambuco.
