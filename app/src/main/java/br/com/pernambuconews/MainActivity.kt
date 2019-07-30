@@ -1,4 +1,4 @@
-package br.com.pernambuconews
+ package br.com.pernambuconews
 
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), Callback {
 
         //PkRSS.with(this).load("https://rss.tecmundo.com.br/feed").callback(this).async()
         PkRSS.with(this).load("https://pox.globo.com/rss/g1/pernambuco/").callback(this).async()
-        //PkRSS.with(this).load("https://www.jornaldocomercio.com/_conteudo/ultimas_noticias/rss.xml").callback(this).async()
+        PkRSS.with(this).load("https://www.jornaldocomercio.com/_conteudo/ultimas_noticias/rss.xml").callback(this).async()
     }
 
     override fun onLoaded(newArticles: MutableList<Article>?) {
