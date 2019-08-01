@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     tools:context="br.com.pernambuconews.MainActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:adjustViewBounds="false"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ultimasnoticias"
+            tools:srcCompat="@drawable/ultimasnoticias" />
 
         <TextView
             android:id="@+id/titulo"
@@ -30,34 +32,15 @@
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
-        <TableLayout
+        <TextView
+            android:id="@+id/data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:stretchColumns="0,2"
-            android:orientation="horizontal">
+            android:gravity="center"
+            android:text="Data Pub"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/colorPrimary" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/data"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Data Pub"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@color/colorPrimary" />
-
-                <View android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/darker_gray"/>
-
-            </TableRow>
-
-        </TableLayout>
 
         <Button
             android:id="@+id/btnVerMais"
@@ -66,9 +49,7 @@
             android:layout_marginTop="16dp"
             android:background="@color/colorAccent"
             android:text="@string/ver_mais"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
-
-
 </android.support.v7.widget.CardView>

@@ -4,28 +4,18 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
+import java.util.Date
+import kotlin.collections.ArrayList
 
-class ItemAdapter(val list: ArrayList<MainActivity.Item>, val context: Context): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
-    class ItemViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val titulo = view.findViewById(R.id.titulo) as TextView
-        //val autor = view.findViewById(R.id.autor) as TextView
-        val data = view.findViewById(R.id.data) as TextView
-        val imagem = view.findViewById(R.id.imagem) as ImageView
-        val btnVerMais = view.findViewById(R.id.btnVerMais) as Button
-    }
+class ItemAdapter(val list: ArrayList<MainActivity.Item>, val context: Context): RecyclerView.Adapter<ItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ItemViewHolder {
         val v = LayoutInflater.from(parent?.context).inflate(R.layout.item_list, parent, false)
         val ivh = ItemViewHolder(v)
-
         return ivh
     }
 
@@ -44,3 +34,4 @@ class ItemAdapter(val list: ArrayList<MainActivity.Item>, val context: Context):
 
     override fun getItemCount(): Int = list.size
 }
+
